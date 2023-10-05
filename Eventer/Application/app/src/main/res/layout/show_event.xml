@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/eventDateAndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:textSize="18sp">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/ivEvent"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/baseline_person_24" />
+
+
+    <TextView
+        android:id="@+id/eventName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:text="TextView"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minWidth="10dp"
+        app:dividerColor="@color/purple_700" />
+
+
+    <com.ms.square.android.expandabletextview.ExpandableTextView
+        android:id="@+id/eventDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        expandableTextView:animDuration="100"
+        expandableTextView:maxCollapsedLines="2">
+
+        <!-- simple text view  -->
+        <TextView
+            android:id="@id/expandable_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#666666"
+            android:textSize="19sp" />
+
+        <!-- expandable ImageButton -->
+        <ImageButton
+            android:id="@id/expand_collapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:background="@android:color/transparent" />
+
+    </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+
+    <ImageView
+        android:id="@+id/liked"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="13dp"
+        android:src="@drawable/unloved">
+
+    </ImageView>
+
+    <TextView
+        android:layout_marginLeft="13dp"
+        android:id="@+id/tvNumberOfLikes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp">
+
+    </TextView>
+
+
+    <GridLayout
+        android:id="@+id/decisionGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:columnCount="2"
+        android:rowCount="1">
+
+        <Button
+
+            android:id="@+id/btnAccept"
+            android:layout_column="0"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/button_bg"
+            android:gravity="start"
+
+            android:text="accept">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btnReject"
+            android:layout_column="1"
+            android:layout_gravity="end"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/button_bg"
+            android:text="reject">
+
+        </Button>
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/btnLike"-->
+        <!--            android:layout_width="40dp"-->
+        <!--            android:layout_height="45dp"-->
+        <!--            android:layout_column="0"-->
+        <!--            android:layout_marginLeft="20dp"-->
+        <!--            android:src="@drawable/dark_red2" />-->
+
+    </GridLayout>
+
+</LinearLayout>
